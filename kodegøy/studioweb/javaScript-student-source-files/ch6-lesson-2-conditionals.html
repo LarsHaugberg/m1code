@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Ch6 JS Conditional statements</title>
+
+		<script type="text/javascript">
+
+		/* 
+
+
+		Properties are the values associated with a JavaScript object. 
+		innerHTML is a property that is the HTML content of an element
+
+		*/
+
+			
+			function runIt() {
+
+				var target = document.getElementById("first");
+				var currentValue = target.innerHTML;
+				console.log(document.getElementById("first").innerHTML);
+
+				if(1<4) {
+				target.innerHTML="It isssssss!";
+					}
+
+			}
+
+
+			/*
+			var str = "This is it";
+			var result = str.indexOf("@");
+			console.log(result);
+
+			if(result != -1) {
+				console.log("Result is: " + result);
+				console.log(true);
+			} else {
+				console.log("Result is: " + result);
+				console.log(false);
+			}*/
+
+		</script>
+		
+	</head>
+	<body>
+
+	<h2>JavaScript Conditional Statements</h2>
+
+
+		<button id="activator" type="button">Activate it!</button>
+
+		<p id="first">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <span>...</span>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dog biscuits.</p>
+
+
+	
+
+	<script>
+			document.getElementById("activator").onclick=function(){
+			runIt();
+		}
+
+
+	</script>
+	</body>
+</html>

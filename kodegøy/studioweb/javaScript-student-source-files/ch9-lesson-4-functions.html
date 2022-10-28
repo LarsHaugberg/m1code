@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Ch9 More JavaScript Functions Lesson 4</title>
+
+<style type="text/css">
+	div {position: relative}
+	h1 {margin: 25px auto; width: 100%; background-color: #E84B0D; text-align: center; font-size: 24px; font-family: sans-serif; color: #FFF}
+	
+	#leftbutt {width: 100px}
+</style>
+
+	</head>
+	<body>
+		<div>
+			
+			<h1>More about Functions</h1>
+			<input type="button" id="button" value="Calculate the area">
+			
+			<p id="target"></p>
+
+		</div>
+
+	<script>
+
+	/* 
+		Use functions to: (1)package up code, to (2)control when it runs and to (3)reuse code in different places. Less code, the better!
+	*/
+
+		function singleReturn(argues) {
+
+			return "The function returned information: " + argues;
+			
+		}
+
+		function multiReturn() {
+
+			alert("Clicked");
+			
+		}
+
+
+
+		document.getElementById("button").onclick=function(){	
+			
+			singleReturn();
+			
+		}
+
+		alert(singleReturn(89));
+	
+	</script>
+	</body>
+</html>

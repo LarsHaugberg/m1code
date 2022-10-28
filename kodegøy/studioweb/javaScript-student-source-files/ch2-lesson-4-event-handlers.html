@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html onkeypress="sniffer('You pressed a key!')">
+	<head>
+		<meta charset="UTF-8">
+		<title>Ch2 JavaScript</title>
+<!--
+http://www.w3schools.com/jsref/dom_obj_event.asp
+
+
+Some common event handlers:
+
+- onclick
+- onmouseover
+- onmouseout
+- onload
+- onkeypress
+- onchange - for form fields
+
+-->
+		<script>
+
+			function sniffer(message) {
+
+				console.log("Something happened: " + message);
+
+			}
+
+		</script>
+
+		<style type="text/css">
+			
+			#secondP {width: 200px; background-color: #AFE6A5}
+
+			p:hover, button:hover {cursor: pointer;}
+
+		</style>	
+
+	</head>
+	<body onResize="sniffer('window resized')" onload="alert('page loading')">
+
+		<h1>Welcome Uber Nerdling!</h1>
+
+		<input type="text" onchange="alert('It changed!')">
+
+		<button id="butt" type="button" onclick="sniffer('Try it button clicked')">Try it</button>
+
+		<p onclick="sniffer('p tag clicked')">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+		<p onmouseover="sniffer('2nd p tag moused-over')" id="secondP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+
+	<script>
+
+		function loadFunc() {
+	
+				alert("The page has loaded." + theDate)
+
+				var theDate = new Date()
+
+			}
+	</script>
+	</body>
+</html>

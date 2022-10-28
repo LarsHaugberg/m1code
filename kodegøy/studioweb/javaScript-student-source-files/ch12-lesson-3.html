@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>Chapter 12 - HTML5 Canvas with animation</title>
+
+
+	<style type="text/css">
+	
+
+    main {width: 50%; margin: 0 auto;}
+
+    #buttons {margin: 0 auto; margin-bottom: 20px; text-align: center;}
+    #displayColor {font-size: 24px; text-align: center;}
+
+		canvas {
+      border: 1px dashed black; padding: 10px; margin: 0 auto; display: block}
+
+	</style>
+	
+</head>
+<body>
+  <main>
+
+    <div id="buttons">
+      <button id="discoStart">Start the Show!</button>
+      <button id="discoStop">Stop the Show!</button>
+    </div>
+
+    <canvas id="whiteBoard" width="400" height="400"></canvas>
+
+    <p id="displayColor"></p>
+
+  </main>
+
+
+<script type="text/javascript">
+
+    var notRunning = true; // prevents double-run bug. 
+
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF'.split('');
+        var color = '#';
+        for (var i = 0; i < 6; i++ ) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+  
+    function discoSquare() {
+      
+      var canvas = document.getElementById("whiteBoard");
+      var context = canvas.getContext("2d");
+
+      var verPos = Math.floor((Math.random() * 399) + 1);
+      var theColor = getRandomColor();
+
+      
+      context.lineWidth = 10;
+      context.strokeStyle = theColor;
+      context.moveTo(10,verPos); // (horizontal / vertical)
+      console.log("vertical pos: " + verPos);
+
+      context.lineTo(400,verPos);
+      context.lineCap = "butt";
+      context.stroke();
+
+      document.getElementById("displayColor").innerHTML = theColor;
+  
+    }
+
+    var animation;
+
+    document.getElementById("discoStart").onclick  = function() {
+   	  
+          if(notRunning) {
+            animation = setInterval(discoSquare, 100);
+            notRunning = false;
+          } else { 
+            alert("Sorry, already running.")
+          }
+
+    }
+
+     document.getElementById("discoStop").onclick  = function() {
+      
+          clearInterval(animation);
+          notRunning = true;      
+    }
+
+</script>
+
+
+</body>
+</html>

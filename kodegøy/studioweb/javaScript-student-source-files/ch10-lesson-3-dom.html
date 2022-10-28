@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Ch10 JavaScript Dom</title>
+
+<style type="text/css">
+	div {position: relative}
+	h1 {margin: 25px auto; width: 100%; background-color: #E84B0D; text-align: center; font-size: 24px; font-family: sans-serif; color: #FFF}
+	
+	#leftbutt {width: 100px}
+</style>
+
+	</head>
+	<body>
+		<div id='theDiv'>
+			
+			<h1>The HTML DOM</h1>
+			<input type="button" id="button" value="Activate!">
+			
+			<p id="target"></p>
+
+		</div>
+
+	<script>
+
+/* 
+
+There are 3 ways to insert HTML into a page with JS:
+	
+	1. document.write() - never use!
+	2. innerHTML - you will use often.
+	3. DOM manipulation methods - more complex but you have more control.
+
+#1  old school way - Using document.write() after an HTML document is fully loaded, will delete all existing HTML. Used mainly for testing.
+
+function myFunction() {
+   document.write("<h2>Hello World</h2>");
+}
+*/
+ 
+
+/* #2: innerHTML 
+		var theText = "Blad blah <h1>The blah</h1>";
+		var targetDiv = document.getElementById("theDiv");
+			targetDiv.innerHTML =  theText + targetDiv.innerHTML;
+			//targetDiv.innerHTML = theText;
+			console.log(targetDiv.innerHTML);
+*/
+
+
+// #3: DOM Manipulation methods
+		function addNewContent() {
+				
+			/* step 1: create a tag. step 2: add text to it.*/
+			var para = document.createElement("p");
+			var node = document.createTextNode("The newer text");
+			para.appendChild(node);
+
+			
+			/* step 3: add the new <p> tag to the <div>.*/
+			var targetDiv = document.getElementById("theDiv");
+			targetDiv.appendChild(para);
+			console.log(targetDiv.innerHTML);
+			}
+
+
+
+		function domWork() {
+			 var targetDiv = document.getElementById("theDiv");
+			 targetDiv.style.backgroundColor = "#BBBBF1";
+			 console.log(targetDiv.innerHTML);
+		}
+
+	
+	
+		document.getElementById("button").onclick=function(){	
+			addNewContent();
+			//alert("Activate!");
+			//myFunction();
+			
+		}
+
+	</script>
+	</body>
+</html>

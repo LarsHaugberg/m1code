@@ -1,0 +1,132 @@
+
+* {
+margin: 0;
+padding: 0;
+}
+
+#container {
+	width:960px;
+	margin-right:auto;
+	margin-left:auto;
+	margin-top:10px;
+	margin-bottom:10px;
+	position:relative;
+	background-color:#FFF;
+}
+
+#header {
+	background-color: #FAF0E6;
+	margin-bottom: 20px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: red;
+}
+
+#navigation {
+float: left;
+width: 198px;
+background-color:#FAF0E6;
+border-style: solid;
+border-width: 1px;
+border-color: red;
+}
+
+#centerDoc {
+float: right;
+width: 738px;
+background-color:#FAF0E6;
+margin-left: 20px;
+border-style: solid;
+border-width: 1px;
+border-color: red;
+}
+
+#footer {
+	float: right;
+	width: 738px;
+	clear: both;
+	background-color: #FAF0E6;
+	margin-top: 20px;
+	margin-left: 20px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: red;
+
+}
+
+#miamiBuilding {
+float: right;
+margin: 20px;
+}
+
+
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: .80em;
+	color: #333333;
+	background-color: #fff;
+}
+
+h1 { font-size: 2em; }
+
+h2 { font-size: 1em; }
+
+
+
+
+
+#header h1 {
+	padding: 10px;
+}
+
+
+
+#navigation h2 {
+padding-left: 10px;
+padding-bottom: 10px;
+}
+
+#navigation li {
+	list-style: none;
+	line-height: 1.5em;
+}
+
+#navigation a {
+	padding-left: 10px;
+	line-height: 2em;
+	text-decoration: none;
+}
+
+#navigation a:hover {
+	background-color: #FAFAD2;
+	display: block;
+}
+
+
+
+#centerDoc p, h3, h1{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#centerDoc p {
+	margin-bottom: 10px;
+}
+
+#centerDoc h1, h3 {
+	margin-bottom: 10px;
+}
+
+#centerDoc li {
+	list-style: none;
+	padding-left: 10px;
+	line-height: 1.5em;
+}
+
+#centerDoc ol{
+	margin-bottom: 10px;
+}
+
+#footer p {
+	padding: 10px;
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>Chapter 12 - contenteditable attribute</title>
+
+
+	<style type="text/css">
+	
+		#editableElement {background-color: #DFE4DF; width: 400px; height: 200px; padding: 10px; margin: 0 auto; margin-top: 10px; margin-bottom: 10px}
+
+    main {width: 50%; margin: 0 auto;}
+
+
+
+	</style>
+	
+</head>
+<body>
+  <main>
+
+    <button onclick="startEdit()">Start Editing</button>
+    <button onclick="stopEdit()">Finish Editing</button>
+
+    <p id="editableElement"></p>
+
+  </main>
+
+
+<script type="text/javascript">
+
+	
+	 function startEdit() {
+      // Make the element editable.
+      var element = document.getElementById("editableElement");
+      element.contentEditable = true;
+      element.focus();
+}
+    function stopEdit() {
+      // Return the element to normal.
+      var element = document.getElementById("editableElement");
+      element.contentEditable = false;
+      
+      // Show the markup in a message box.
+      alert("This is what you wrote: \n" + element.innerHTML);
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Ch8 JavaScript Objects and Arrays</title>
+<!--
+	
+	http://www.w3schools.com/jsref/jsref_obj_array.asp
+
+-->
+	</head>
+	<body>
+
+		<h1>Looping can make your code spin!</h1>
+		<input type="button" id="looper" value="Do it again!">
+		<p id="target"></p>
+
+	<script>
+		document.getElementById("looper").onclick=function(){	
+
+		var dogs = [
+				"German Shepherd", 
+				325425, 
+			   " Beagle",
+			   " Boxer",
+			   " Chimpdog"
+			];
+
+			dogs.push("Pushing Dog");
+
+			//dogs.sort();
+
+		for	(index = 0; index < dogs.length; index++) {
+
+			alert(dogs[index]);
+		}
+
+		var pets = ["Pets", "Pets2", dogs, false];
+
+		alert(dogs.length);	
+
+		/*
+		Silly way.
+		var pet1 = "Pets";
+		var pet2 = "Pets2"
+
+		....*/
+
+		// true and false - boolean
+
+			document.getElementById("target").innerHTML = pets[2];
+		}
+	</script>
+	</body>
+</html>

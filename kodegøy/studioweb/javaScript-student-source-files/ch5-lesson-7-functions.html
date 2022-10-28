@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Ch5 JS Functions</title>
+
+		<script type="text/javascript">
+
+			/*  
+
+			A couple of JavaScript's Global Functions:
+				
+			isNaN()	Determines whether a value is an illegal number
+				
+			parseInt()	Parses a string and returns an integer
+			*/
+			
+			function numberCheck() {
+			var myNumber = 4;
+			//var result = isNaN(myNumber);
+			console.log(isNaN(myNumber));
+			}
+
+			function intCheck() {
+			var myNumber = "32  cookies";
+			var result = parseInt(myNumber);
+		 	console.log(result);
+		 	console.log(result + 32);
+		 	console.log(myNumber + 32);
+		 	}
+	
+		</script>
+		
+	</head>
+	<body>
+
+	<h2>JavaScript Functions are like mini apps inside the JS app</h2>
+
+
+		<button id="activator" type="button">Activate it!</button>
+
+		<p id="firstP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dog biscuits.</p>
+
+
+	
+
+	<script>
+			document.getElementById("activator").onclick=function(){
+			numberCheck();
+		}
+
+		
+	</script>
+	</body>
+</html>

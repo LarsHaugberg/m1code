@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Beginners CSS - Chapter 8</title>
+
+
+<style type="text/css">
+
+* {margin: 0px;}
+
+main {
+  margin: 10px auto; width: 600px; padding: 30px;  margin-top: 0px; 
+  background-color: olive; display: block;
+}
+
+
+
+
+
+@media screen and (max-width: 350px) {
+  main {
+    background-color: #88A5E0;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  main {
+    background-color: red;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  main {
+    background-image: url("images/Reeds-in-Wind-Cinemagraph.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 400px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    background-image: none;
+    background-color: #FFF;
+  }
+
+  h1, p {display: none;}
+}
+
+
+
+
+
+
+
+</style>
+	
+</head>
+<body>
+
+  <main>
+
+    <h1>Media Queries</h1>
+    <p>
+      Media allows you to make your pages to change to fit any device.
+    </p>
+
+  </main>
+
+</body>
+</html>

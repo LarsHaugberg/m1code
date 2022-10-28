@@ -1,0 +1,80 @@
+
+
+/* tag Selectors */
+
+body {
+font-size: 14px;
+font-family: Georgia, "Times New Roman", Times, serif;
+color: #333333;
+background-color: #FFF;
+}
+
+h1 {
+font-weight: bold;
+color: #000000;
+}
+
+h2 {
+font-weight: bold;
+color: #000000;
+text-align: center;
+}
+
+h3 {
+font-weight: bold;
+color: #000000;
+text-align: left;
+margin-top: 30px;
+}
+ 
+p { width: 80%; }
+
+
+ul li {
+list-style-type: circle;
+line-height: 200%;
+}
+
+ol li {
+list-style-type: numbers;
+line-height: 180%;
+width: 65%;
+}
+
+
+/**************** Pseudo classes ****************/
+
+a:link {color: green; text-decoration: none;}   
+a:visited { color: green; background: red; }   
+a:hover { color: blue; text-decoration: underline;} 
+a:active { color: green; font-weight: bold;}
+
+#centerDoc a:link {color: green; text-decoration: underline;}   
+#centerDoc a:hover { color: blue;} 
+
+/************************* ID's *************************/
+
+#navigation {
+position: absolute;
+z-index: 10;
+width: 210px;
+height: 600px;
+margin: 0;
+border-right: 1px solid #000000;
+font-weight: normal;
+}
+
+#centerDoc {
+position: absolute;
+z-index: 15;
+padding: 0 0 20px 20px; /*top right bottom left*/
+margin-top: 50px;
+margin-left: 235px;
+width: 80%;
+max-width: 1200px;
+min-width: 500px;
+}
+
+#miamiBuilding {
+float: right; margin: 10px; margin-bottom: 50px; margin-right:20%
+}
