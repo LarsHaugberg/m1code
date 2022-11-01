@@ -1,0 +1,20 @@
+body {
+    background-color: cadetblue;
+}
+
+.bilder {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+  }
+  .bilder img:hover {
+    width: 105%;
+    cursor: pointer;
+  }
+  button {
+    padding: 9px 25px;
+    background-color: rgb(180, 228, 142);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
