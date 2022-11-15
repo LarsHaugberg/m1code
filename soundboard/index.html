@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #999;
+        color: #00f;
+        
+    }
+
+    #main {
+        background-color:#d2691e;
+        padding: 5px;
+        width: 1000px;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        border-radius: 50px;
+        border: #00f 5px groove;
+
+
+        
+
+    }
+    .sound-board {
+        color: #000;
+        padding: 15px;
+        width: 125px;
+        background-color: #d2691e;
+        border: #00f 5px groove;
+        border-radius: 50px;
+        
+    }
+</style>
+
+<body>
+    <div id="main">
+        <div>
+            <button class="sound-board" onclick="lydKontroll('bubbles')">BUBBLES
+                <audio id="bubbles" src="lyd/Soundboard_sounds_bubbles.mp3"></audio>
+            </button>
+        </div>
+        
+        <div>
+            <button class="sound-board" onclick="lydKontroll('clay')">CLAY
+                <audio id="clay" src="lyd/Soundboard_sounds_clay.mp3"></audio>
+            </button>
+        </div>
+
+        <div>
+            <button class="sound-board" onclick="lydKontroll('confetti')">CONFETTI
+                <audio id="confetti" src="lyd/Soundboard_sounds_confetti.mp3"></audio>
+            </button>
+        </div>
+
+        <div>
+            <button class="sound-board" onclick="lydKontroll('glimmer')">GLIMMER
+                <audio id="glimmer" src="lyd/Soundboard_sounds_glimmer.mp3"></audio>
+            </button> 
+        </div>
+
+        <div>
+            <button class="sound-board" onclick="lydKontroll('moon')">MOON
+                <audio id="moon" src="lyd/Soundboard_sounds_moon.mp3"></audio>
+            </button>
+        </div>
+
+        <div>
+            <button class="sound-board" onclick="lydKontroll('ufo')">UFO
+                <audio id="ufo" src="lyd/Soundboard_sounds_ufo.mp3"></audio>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function lydKontroll(lydVelger) {
+            document.getElementById(lydVelger).play();
+            
+        }
+
+    </script>
+</body>
+
+</html>
